@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.myContainer {
+  @apply container w-full mx-auto lg:px-8 md:px-6 px-5;
 }
+
+
+/* BACK TO TOP */
+.scroll-to-top {
+  bottom: 13px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 200;
+}
+
+.scroll-to-top .icon2 {
+  margin-top: 10px;
+  color: wheat !important;
+  animation: scrollTop 0.5s alternate ease infinite;
+}
+
+@keyframes scrollTop {
+  from {
+    transform: translateY(2px);
+  }
+  to {
+    transform: translateY(-1px);
+  }
+}
+
