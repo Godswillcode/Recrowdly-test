@@ -37,12 +37,14 @@ const Navbar = ({ click }) => {
           </li>
         </ul>
       </div>
+      <div className="flex">
       <button className="bg-black text-white px-4 py-1 text-sm">
         Schedule A Call
       </button>
 
-      <div className="hamburger_menu" onClick={click}>
-        <i className="fas fa-bars text-3xl"></i>
+      <div className="hamburger_menu ml-3" onClick={click}>
+        <i className="fas fa-bars text-2xl"></i>
+      </div>
       </div>
     </nav>
   );
