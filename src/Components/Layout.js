@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-// import BackToTop from "./BackToTop";
+import BackToTop from "./BackToTop";
 import Footer from "./Footer";
 import Backdrop from "./Navbar/Backdrop";
 import Navbar from "./Navbar/Navbar";
@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
       <Navbar click={() => setSideToggle(true)} />
       <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
       <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
-      {/* <BackToTop /> */}
+      <BackToTop />
       <main>{children}</main>
 
       <Footer />

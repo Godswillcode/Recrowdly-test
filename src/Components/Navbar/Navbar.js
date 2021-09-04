@@ -5,7 +5,7 @@ import logo from "../../Images/logo.svg";
 
 const Navbar = ({ click }) => {
   return (
-    <nav className="navbar bg-white shadow-sm px-6 lg:px-14">
+    <nav className="navbar bg-white shadow-sm px-6 lg:px-16">
       <div className="flex">
         <NavLink to="/" className="navbar_logo flex items-center">
           <img src={logo} alt="logo" />{" "}
