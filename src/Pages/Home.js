@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import bg from "../Images/bg-2.png";
+import bg2 from "../Images/bg-1.jpg";
 import image1 from "../Images/image 20.png";
 import image2 from "../Images/image 21.png";
 import image3 from "../Images/image 22.png";
@@ -100,10 +101,10 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-28">
           <AnimationS
             title="2D Animation"
-            icon="M0 1v22h24v-22h-24zm4 20h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm14 16h-12v-8h12v8zm0-10h-12v-8h12v8zm4 10h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2z"
+            icon="M22 2v20h-20v-20h20zm2-2h-24v24h24v-24z"
             desc="Go classic with a lively 2D animated video that brings to life your ideas to life with vivid colors and motion."
           />
           <AnimationS
@@ -117,7 +118,30 @@ const Home = () => {
             desc="Get the best of both 2D and 3D worlds to really bring the most out of your concept."
           />
         </div>
+
+      
+
+
       </div>
+        {/* pricing */}
+        <div
+          className="w-full"
+          style={{
+            background: `url(${bg2})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="myContainer py-5">
+          <h2 className="font-extrabold text-2xl lg:text-4xl pb-3 text-center">Pricing Model</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-8">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+          </div>
+        </div>
     </>
   );
 };
