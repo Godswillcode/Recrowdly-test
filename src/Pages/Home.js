@@ -139,13 +139,13 @@ const Home = () => {
 
       <div className="myContainer mt-10">
         <div className="flex justify-between overflow-x-auto">
-          <img src={image1} alt="about" className="" />
-          <img src={image2} alt="about" className="" />
-          <img src={image3} alt="about" className="" />
-          <img src={image4} alt="about" className="" />
-          <img src={image5} alt="about" className="" />
-          <img src={image6} alt="about" className="" />
-          <img src={image7} alt="about" className="" />
+          <img src={image1} alt="about" className="h-4" />
+          <img src={image2} alt="about" className="h-6" />
+          <img src={image3} alt="about" className="h-6" />
+          <img src={image4} alt="about" className="h-6" />
+          <img src={image5} alt="about" className="h-6" />
+          <img src={image6} alt="about" className="h-6" />
+          <img src={image7} alt="about" className="h-5" />
         </div>
 
         <div className="md:text-center text-left mt-24">
