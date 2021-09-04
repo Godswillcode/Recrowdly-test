@@ -10,11 +10,70 @@ import image4 from "../Images/image 23.png";
 import image5 from "../Images/image 24.png";
 import image6 from "../Images/image 25.png";
 import image7 from "../Images/image 26.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import portfolio from "../Images/portfolio.jpg";
+import Testimonial from "../Components/Testimonial";
+
+function SampleNextArrow(props) {
+  const { style } = props;
+  return <div style={{ ...style, display: "none" }} />;
+}
+
+function SamplePrevArrow(props) {
+  const { style } = props;
+  return <div style={{ ...style, display: "none" }} />;
+}
 
 const Home = () => {
   const [open, setOpen] = useState(false);
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
+
+  var settings = {
+    infinite: true,
+    dots: true,
+    speed: 500,
+    autoplay: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
@@ -118,30 +177,141 @@ const Home = () => {
             desc="Get the best of both 2D and 3D worlds to really bring the most out of your concept."
           />
         </div>
-
-      
-
-
       </div>
-        {/* pricing */}
-        <div
-          className="w-full"
-          style={{
-            background: `url(${bg2})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="myContainer py-5">
-          <h2 className="font-extrabold text-2xl lg:text-4xl pb-3 text-center">Pricing Model</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-8">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+      {/* pricing */}
+      <div
+        className="w-full"
+        style={{
+          background: `url(${bg2})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="myContainer py-14">
+          <h2 className="font-extrabold text-2xl lg:text-4xl pb-3 text-center gap-8">
+            Pricing Model
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 mt-20 gap-8">
+            <div>
+              <div className="md:mt-60 lg:mt-36" />
+              <div className="px-8 py-5" style={{ background: "#ffffffef" }}>
+                <h3 className="font-semibold text-lg">30 Second</h3>
+                <div className="bg-black my-5" style={{ height: "1px" }} />
+                <p className="text-sm">Commercial video (2D)</p>
+                <h3 className="font-semibold text-lg pt-2">$2,000</h3>
+                <div
+                  className="bg-gray-300 my-4 w-3/6"
+                  style={{ height: "1px" }}
+                />
+                <p className="text-sm">Commercial video (3D)</p>
+                <h3 className="font-semibold text-lg pt-2">$2,500</h3>
+              </div>
+            </div>
+
+            <div>
+              <div className="md:mt-16" />
+              <div className="px-8 py-5" style={{ background: "#ffffffef" }}>
+                <h3 className="font-semibold text-lg">1 Minute</h3>
+                <div className="bg-black my-5" style={{ height: "1px" }} />
+                <p className="text-sm">
+                  Explainer video with 2D assets on decided color pallet
+                  <br className="mt-4" /> <br />
+                  (Extra pallets incur additional costs)
+                </p>
+                <h3 className="font-semibold text-lg pt-2">$3,000</h3>
+                <div
+                  className="bg-gray-300 my-4 w-3/6"
+                  style={{ height: "1px" }}
+                />
+                <p className="text-sm">
+                  Explainer video $3,500 with 3D <br /> assets on decided color
+                  palette
+                </p>
+                <h3 className="font-semibold text-lg pt-2">$3,500</h3>
+              </div>
+            </div>
+
+            <div
+              className="px-8 py-5 text-white"
+              style={{ background: "#000000ef" }}
+            >
+              <h3 className="font-semibold text-lg">
+                1 and a half to <br />2 minute
+              </h3>
+              <div className="bg-gray-300 my-7" style={{ height: "1px" }} />
+              <p className="text-sm pb-10 md:pb-44">
+                Detailed explainer video with detailed asset
+              </p>
+
+              <div className="flex justify-between">
+                <h3 className="font-semibold text-lg pt-2">$5,000</h3>
+                <h3 className="font-semibold text-lg pt-2">Buy Now</h3>
+              </div>
             </div>
           </div>
+          <div
+            className="py-5 mt-14 px-8 text-sm"
+            style={{ background: "#ffffffef" }}
+          >
+            <h2 className="font-semibold text-lg pb-3">Add-ons</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 mb-5">
+              <div>
+                <p>Live actor or actress $350</p>
+                <p>Copywriting and story direction: $500</p>
+              </div>
+              <div>
+                <p>Asset creation 2D or 3D $45/hour</p>
+                <p>Each video includes two sets of revisions</p>
+              </div>
+              <div>
+                <p>Additional revisions billed at $45/hr</p>
+              </div>
+            </div>
+            <p>
+              Satisfaction guaranteed. If you’re not happy with the final
+              product don’t pay a dime!
+            </p>
+          </div>
         </div>
+      </div>
+
+      {/* portfolio */}
+      <div className="myContainer text-center py-14">
+        <h2 className="font-extrabold text-2xl lg:text-4xl pb-2 text-center gap-8">
+          Portfolio
+        </h2>
+        <p className="pb-10">
+          We've Created Hundreds of Videos for Satisfied Customers{" "}
+          <br className="lg:flex hidden" /> in the US and Globally. Here Are
+          Just a Few!
+        </p>
+
+        <Slider {...settings}>
+          <div>
+            <img src={portfolio} alt="portfolio" />
+          </div>
+          <div>
+            <img src={portfolio} alt="portfolio" />
+          </div>
+          <div>
+            <img src={portfolio} alt="portfolio" />
+          </div>
+        </Slider>
+
+        <div className="mt-14 flex flex-col lg:flex-row justify-between items-center shadow-xl bg-white py-4 px-14">
+          <h3 className="font-semibold text-lg pb-2 lg:pb-0">
+            Automated Business Growth
+          </h3>
+
+          <button className="py-2 px-6 text-sm text-white bg-black w-full lg:w-40">
+            Schedule A Call
+          </button>
+        </div>
+      </div>
+
+      {/* Reviews */}
+      <Testimonial/>
     </>
   );
 };
