@@ -51,10 +51,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="myContainer -mt-40">
+      <div className="myContainer -mt-40 flex justify-center">
         <div
-          style={{ background: "#232323", height: "60vh" }}
-          className=" flex justify-center items-center text-center text-white"
+          style={{ background: "#232323" }}
+          className=" flex justify-center w-full lg:w-3/4 py-32 items-center text-center text-white"
         >
           <div>
             <i onClick={onOpenModal} className="fas fa-play text-5xl hover:text-secondary cursor-pointer bg-primary rounded-full mb-5 mt-3"></i>
@@ -76,7 +76,7 @@ const Home = () => {
       </div>
 
       <div className="myContainer mt-10">
-        <div className="flex justify-between overflow-x-hidden">
+        <div className="flex justify-between overflow-x-auto">
           <img src={image1} alt="about" className="h-"/>
           <img src={image2} alt="about" className="h-"/>
           <img src={image3} alt="about" className="h-"/>
