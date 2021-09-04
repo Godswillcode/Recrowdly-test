@@ -34,13 +34,13 @@ const Home = () => {
             <br className="lg:flex hidden" /> and wonderful animations.
           </h1>
 
-          <form className="mt-10 lg:bg-white lg:inline-block lg:pr-1 text-right">
+          <form className="mt-10 md:bg-white md:inline-block md:pr-1 text-right">
             <input
               type="email"
               placeholder="Enter an email address and let’s get started"
               className="text-sm pl-3 py-2 pr-6 w-80 focus:outline-none"
             />
-            <br className="lg:hidden" />
+            <br className="md:hidden" />
             <button
               type="submit"
               className="py-1 px-6 text-sm text-white bg-black mt-2 lg:mt-0"
@@ -76,7 +76,7 @@ const Home = () => {
       </div>
 
       <div className="myContainer mt-10">
-        <div className="flex justify-between overflow-x-scroll">
+        <div className="flex justify-between overflow-x-hidden">
           <img src={image1} alt="about" className="h-"/>
           <img src={image2} alt="about" className="h-"/>
           <img src={image3} alt="about" className="h-"/>
