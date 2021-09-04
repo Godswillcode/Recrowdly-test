@@ -37,17 +37,15 @@
     flex: 1;
     padding: 1rem;
     text-decoration: none;
-    color: #444444;
+    color: #000;
     font-size: 1rem;
  }
  
  .sidedraw_links > li > a:hover {
-    color: var(--primary);
+   @apply text-blue-700;
  }
 
- .sidedraw_links .is-active {
-    color: var(--primary);
- }
+
  
  @media(min-width: 760px) {
     .sidedrawer {

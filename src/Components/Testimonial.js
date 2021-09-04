@@ -30,25 +30,41 @@ const Testimonial = () => {
         WHAT OTHERS ARE SAYING:
       </h2>
 
-     <Slider {...settings}>
-         <Reviews desc="Noah showed me how to grow my email list and figure out my site’s revenue model. Don’t let his casual, taco-talking style fool you. The guy gets serious business results.”" name="Andrew Warner" job="   Founder of Mixergy.com"/> 
-     </Slider>
+      <Slider {...settings}>
+        <Reviews
+          desc="Noah showed me how to grow my email list and figure out my site’s revenue model. Don’t let his casual, taco-talking style fool you. The guy gets serious business results.”"
+          name="Andrew Warner"
+          job="   Founder of Mixergy.com"
+        />
+         <Reviews
+          desc="Noah showed me how to grow my email list and figure out my site’s revenue model. Don’t let his casual, taco-talking style fool you. The guy gets serious business results.”"
+          name="Andrew Warner"
+          job="   Founder of Mixergy.com"
+        />
+         <Reviews
+          desc="Noah showed me how to grow my email list and figure out my site’s revenue model. Don’t let his casual, taco-talking style fool you. The guy gets serious business results.”"
+          name="Andrew Warner"
+          job="   Founder of Mixergy.com"
+        />
+         <Reviews
+          desc="Noah showed me how to grow my email list and figure out my site’s revenue model. Don’t let his casual, taco-talking style fool you. The guy gets serious business results.”"
+          name="Andrew Warner"
+          job="   Founder of Mixergy.com"
+        />
+      </Slider>
     </div>
   );
 };
 
-
 // Reviews Component
-const Reviews = ({desc, name, job}) => {
-    return(
-        <div className="md:px-52">
-           <p>{desc}</p>
-           <h2 className="pt-6 pb-1">- {name}</h2>
-           <h4>{job}</h4>
-        </div>
-    )
+const Reviews = ({ desc, name, job }) => {
+  return (
+    <div className="lg:px-80 mb-4">
+      <p>{desc}</p>
+      <h2 className="pt-6 pb-1">- {name}</h2>
+      <h4>{job}</h4>
+    </div>
+  );
+};
 
- 
-}
- 
 export default Testimonial;

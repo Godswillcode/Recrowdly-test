@@ -35,12 +35,9 @@
   }
   
   li .nav_link:hover {
-    color: var(--primary);
+    @apply text-blue-700;
   }
   
-  .navLink_wrap li .is-active {
-    color: red !important;
-  }
   
   .social_media img {
     height: 25px;
