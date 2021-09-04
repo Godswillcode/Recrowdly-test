@@ -36,17 +36,17 @@ const Testimonial = () => {
           name="Andrew Warner"
           job="   Founder of Mixergy.com"
         />
-         <Reviews
+        <Reviews
           desc="Noah showed me how to grow my email list and figure out my site’s revenue model. Don’t let his casual, taco-talking style fool you. The guy gets serious business results.”"
           name="Andrew Warner"
           job="   Founder of Mixergy.com"
         />
-         <Reviews
+        <Reviews
           desc="Noah showed me how to grow my email list and figure out my site’s revenue model. Don’t let his casual, taco-talking style fool you. The guy gets serious business results.”"
           name="Andrew Warner"
           job="   Founder of Mixergy.com"
         />
-         <Reviews
+        <Reviews
           desc="Noah showed me how to grow my email list and figure out my site’s revenue model. Don’t let his casual, taco-talking style fool you. The guy gets serious business results.”"
           name="Andrew Warner"
           job="   Founder of Mixergy.com"

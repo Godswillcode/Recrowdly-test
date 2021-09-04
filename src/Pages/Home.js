@@ -311,7 +311,7 @@ const Home = () => {
       </div>
 
       {/* Reviews */}
-      <Testimonial/>
+      <Testimonial />
     </>
   );
 };

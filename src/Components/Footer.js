@@ -9,9 +9,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-8 text-center text-sm lg:text-base">
         <Link to="/" className="flex items-center justify-center">
           <img src={logo} alt="logo" />{" "}
-          <h2 className="font-semibold pl-3 text-lg">
-            Recrowdly
-          </h2>
+          <h2 className="font-semibold pl-3 text-lg">Recrowdly</h2>
         </Link>
 
         <div className="flex justify-between">
@@ -21,7 +19,10 @@ const Footer = () => {
           <Link to="#!">FAQs</Link>
         </div>
         <div>
-            <p>A Punch Group company <span className="font-semibold pl-1">Punch</span></p>
+          <p>
+            A Punch Group company{" "}
+            <span className="font-semibold pl-1">Punch</span>
+          </p>
         </div>
       </div>
     </footer>
