@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import bg from "../Images/bg-2.png";
@@ -15,6 +15,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import portfolio from "../Images/portfolio.jpg";
 import Testimonial from "../Components/Testimonial";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function SampleNextArrow(props) {
   const { style } = props;
@@ -30,6 +32,10 @@ const Home = () => {
   const [open, setOpen] = useState(false);
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
+
+  useEffect(() => {
+    Aos.init({ duration: 1300 });
+  }, []);
 
   var settings = {
     infinite: true,
@@ -90,7 +96,7 @@ const Home = () => {
         id="home"
       >
         <div className="myContainer">
-          <h1 className="font-extrabold text-3xl lg:text-5xl">
+          <h1 className="font-extrabold text-3xl lg:text-5xl" data-aos="zoom-in">
             Bring your idea to life with vivid colors{" "}
             <br className="lg:flex hidden" /> and wonderful animations.
           </h1>
@@ -151,7 +157,7 @@ const Home = () => {
         </div>
 
         <div className="md:text-center text-left mt-24" id="services">
-          <h2 className="font-extrabold text-2xl lg:text-4xl pb-3">
+          <h2 className="font-extrabold text-2xl lg:text-4xl pb-3" data-aos="fade-up">
             Animated Video Production & Video <br className="lg:flex hidden" />{" "}
             Marketing Services:
           </h2>
@@ -192,7 +198,7 @@ const Home = () => {
         id="pricing"
       >
         <div className="myContainer py-14">
-          <h2 className="font-extrabold text-2xl lg:text-4xl pb-3 text-center gap-8">
+          <h2 className="font-extrabold text-2xl lg:text-4xl pb-3 text-center gap-8" data-aos="fade-up">
             Pricing Model
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 mt-20 gap-8">
@@ -281,7 +287,7 @@ const Home = () => {
 
       {/* portfolio */}
       <div className="myContainer text-center py-14" id="portfolio">
-        <h2 className="font-extrabold text-2xl lg:text-4xl pb-2 text-center gap-8">
+        <h2 className="font-extrabold text-2xl lg:text-4xl pb-2 text-center gap-8" data-aos="fade-up">
           Portfolio
         </h2>
         <p className="pb-10">
