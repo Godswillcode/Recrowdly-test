@@ -10,6 +10,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-padding-top: 100px;
+}
+
 .myContainer {
   @apply container w-full mx-auto lg:px-8 md:px-6 px-5;
 }
@@ -36,4 +40,10 @@
   to {
     transform: translateY(-1px);
   }
+}
+
+
+/*=== footer  ==*/
+footer a {
+  @apply hover:text-blue-700;
 }

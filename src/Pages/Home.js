@@ -85,7 +85,9 @@ const Home = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           height: "100vh",
+         
         }}
+        id="home"
       >
         <div className="myContainer">
           <h1 className="font-extrabold text-3xl lg:text-5xl">
@@ -102,7 +104,7 @@ const Home = () => {
             <br className="md:hidden" />
             <button
               type="submit"
-              className="py-1 px-6 text-sm text-white bg-black mt-2 lg:mt-0"
+              className="py-1 px-6 text-sm text-white bg-black mt-2 lg:mt-0 hover:bg-blue-700 transition ease-in-out duration-500"
             >
               Let’s Go
             </button>
@@ -148,7 +150,7 @@ const Home = () => {
           <img src={image7} alt="about" className="h-5" />
         </div>
 
-        <div className="md:text-center text-left mt-24">
+        <div className="md:text-center text-left mt-24" id="services">
           <h2 className="font-extrabold text-2xl lg:text-4xl pb-3">
             Animated Video Production & Video <br className="lg:flex hidden" />{" "}
             Marketing Services:
@@ -160,7 +162,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-28">
           <AnimationS
             title="2D Animation"
             icon="M22 2v20h-20v-20h20zm2-2h-24v24h24v-24z"
@@ -187,6 +189,7 @@ const Home = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
+        id="pricing"
       >
         <div className="myContainer py-14">
           <h2 className="font-extrabold text-2xl lg:text-4xl pb-3 text-center gap-8">
@@ -277,7 +280,7 @@ const Home = () => {
       </div>
 
       {/* portfolio */}
-      <div className="myContainer text-center py-14">
+      <div className="myContainer text-center py-14" id="portfolio">
         <h2 className="font-extrabold text-2xl lg:text-4xl pb-2 text-center gap-8">
           Portfolio
         </h2>
@@ -304,7 +307,7 @@ const Home = () => {
             Automated Business Growth
           </h3>
 
-          <button className="py-2 px-6 text-sm text-white bg-black w-full lg:w-40">
+          <button className="py-2 px-6 text-sm text-white bg-black w-full lg:w-40 hover:bg-blue-700 transition ease-in-out duration-500">
             Schedule A Call
           </button>
         </div>
@@ -320,7 +323,7 @@ const Home = () => {
 
 const AnimationS = ({ title, icon, desc }) => {
   return (
-    <div className="flex flex-row lg:flex-col gap-6">
+    <div className="flex flex-row lg:flex-col gap-6 hover:shadow-md py-6 px-3">
       <div className="flex justify-center items-center">
         <i className="bg-white p-4 rounded-full shadow-2xl">
           {" "}
@@ -337,7 +340,7 @@ const AnimationS = ({ title, icon, desc }) => {
       </div>
       <div className="lg:text-center text-left">
         <h3 className="md:text-xl text-base font-semibold pb-2">{title}</h3>
-        <p>{desc}</p>
+        <p className="text-sm">{desc}</p>
       </div>
     </div>
   );

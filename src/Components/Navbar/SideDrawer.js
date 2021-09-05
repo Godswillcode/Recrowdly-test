@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import "./SideDrawer.css";
 import logo from "../../Images/logo.svg";
 
@@ -14,23 +14,23 @@ function SideDrawer({ show, click }) {
     <div className={sideDrawerClass.join(" ")}>
       <ul className="sidedraw_links" onClick={click}>
         <li>
-          <NavLink to="/">
+          <a href="/#home">
             <img src={logo} alt="logo" />
-          </NavLink>
+          </a>
         </li>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <a href="/#home">Home</a>
         </li>
         <li>
-          <NavLink to="#!">Services</NavLink>
+          <a href="/#services">Services</a>
         </li>
         <li>
-          <NavLink to="#!">Pricing</NavLink>
+          <a href="/#pricing">Pricing</a>
         </li>
         <li>
-          <NavLink to="#!">
+          <a href="/#portfolio">
             Portfolio
-          </NavLink>
+          </a>
         </li>
       </ul>
     </div>
